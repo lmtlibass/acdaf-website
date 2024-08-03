@@ -1,17 +1,10 @@
-let menu = document.getElementById('menu');
-let nav = document.getElementById("menuArea");
-let close = document.getElementById("close");
-let open = document.getElementById("open");
+document.addEventListener("DOMContentLoaded", function () {
+     let menu = document.getElementById("menu");
+     let nav = document.getElementById("menuArea");
+     let barranv = document.getElementById("nav");
 
-menu.addEventListener('click', function () {
-     if (nav.style.display === "block") {
-          nav.style.display = "none";
-          close.style.visibility = "hidden";
-          open.style.visibility = "visible";
-     } else {
-          nav.style.display = "block";
-          close.style.visibility = "visible";
-          open.style.visibility = "hidden";
-     }
-}
-);
+     menu.addEventListener("click", function () {
+          nav.classList.toggle("open");
+          menu.classList.toggle("openmenu");
+     });
+});
